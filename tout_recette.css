@@ -1,0 +1,165 @@
+h2{
+    color: #4CAF50;
+}
+.search-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-image: url('food2.jpg');
+    background-size: cover;
+}
+
+.search-section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: white; /* Couleur apaisante */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espace entre le menu déroulant et le champ de recherche */
+    margin-top: 15px;
+}
+
+/* Styles pour le menu déroulant */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Dégradé identique à l'en-tête */
+    color: white;
+    padding: 12px 20px; /* Espacement interne du bouton */
+    font-size: 1.1em; /* Taille de la police */
+    border: none;
+    cursor: pointer; /* Change le curseur au survol */
+    transition: background 0.3s; /* Transition pour l'effet de survol */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.dropbtn:hover {
+    background: linear-gradient(to right, #388E3C, #689F38); /* Couleur plus foncée au survol */
+}
+
+.dropdown-content {
+    display: none; /* Cache le contenu du menu déroulant par défaut */
+    position: absolute; /* Positionne le menu par rapport au parent */
+    background-color: white; /* Fond du menu déroulant */
+    min-width: 160px; /* Largeur minimale du menu */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    z-index: 1; /* S'assure que le menu est au-dessus des autres éléments */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.dropdown-content a {
+    color: #333; /* Couleur des liens */
+    padding: 12px 16px; /* Espacement interne des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    display: block; /* Permet de cliquer sur tout l'élément */
+    transition: background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Fond des liens au survol */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Affiche le contenu au survol du menu déroulant */
+}
+
+/* Ajustements pour le champ de recherche */
+#search-bar {
+    width: 60%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #4CAF50; /* Bordure colorée */
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    color: #2e6631;
+}
+
+#search-bar:focus {
+    border-color: #FFD54F; /* Changement de couleur au focus */
+    outline: none;
+}
+
+/* Styles pour la liste des recettes */
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille responsive */
+    gap: 30px;
+    justify-items: center;
+}
+
+.recipe-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px); /* Déplacement léger au survol */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s; /* Effet de zoom sur image */
+}
+
+.recipe-card:hover img {
+    transform: scale(1.05); /* Zoomer sur l'image au survol */
+}
+
+.recipe-card h3 {
+    font-size: 1.4em;
+    margin: 15px;
+    color: #4CAF50; /* Couleur apaisante pour les titres */
+}
+
+.recipe-card p {
+    font-size: 14px;
+    color: #666; /* Texte descriptif plus doux */
+    margin: 0 15px 15px;
+}
+
+.view-button {
+    display: block;
+    background-color: #4CAF50; /* Bouton vert apaisant */
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    margin: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.view-button:hover {
+    background-color: #2e6631; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Mise à l'échelle au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+

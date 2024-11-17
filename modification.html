@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier une Recette</title>
+    <link rel="stylesheet" href="modification.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <header>
+        <h1>Modifier la Recette</h1>
+        <nav>
+            <a href="accueil.html">Accueil</a>
+            <a href="ajout.html">Ajouter une Recette</a>
+            <a href="login.html">Connexion</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="edit-recipe-form">
+            <form action="modifier-recette.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="recipe_id" value="ID_de_la_recette"> <!-- Champ caché pour l'ID de la recette -->
+
+                <div class="form-group">
+                    <label for="recipe-name">Nom du Plat :</label>
+                    <input type="text" id="recipe-name" name="recipe_name"   placeholder="Nom actuel du plat" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ingredients">Ingrédients :</label>
+                    <textarea id="ingredients" name="ingredients" rows="5" required placeholder="Liste actuelle des ingrédients..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructions">Instructions :</label>
+                    <textarea id="instructions" name="instructions" rows="8" required placeholder="Instructions actuelles de préparation..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="preparation-time">Temps de Préparation (en minutes) :</label>
+                    <input type="number" id="preparation-time" name="preparation_time" value="Temps actuel" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="recipe-image">Image du Plat :</label>
+                    <input type="file" id="recipe-image" name="recipe_image" accept="image/*">
+                    <p>Image actuelle : <img src="recette1.jpg" alt="Image de la recette"    alt="Image actuelle de la recette" class="current-recipe-image"></p>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Mettre à Jour la Recette</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Application de Gestion de Recettes. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

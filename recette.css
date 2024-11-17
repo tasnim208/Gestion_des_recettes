@@ -1,0 +1,140 @@
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Fond clair */
+    margin: 0;
+    padding: 0;
+}
+h2{
+    color: #45a049;
+}
+header {
+    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Dégradé de vert */
+    color: #ffffff;
+    padding:  30px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Taille de police pour le titre */
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 1.1em;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 2px;
+    width: 0;
+    background-color: #FFD54F; /* Ligne dorée en dessous */
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+nav a:hover {
+    color: #FFD54F; /* Couleur dorée au survol */
+}
+
+
+
+main {
+    padding: 20px;
+    max-width: 800px; /* Largeur maximale pour le contenu */
+    margin: auto; /* Centrage du contenu */
+}
+
+.recipe-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.recipe-image {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px; /* Coins arrondis pour l'image */
+    margin-bottom: 20px;
+}
+
+.recipe-info, .recipe-instructions, .recipe-time, .recipe-actions {
+    background-color: #f2f2f2; /* Fond gris clair */
+    padding: 15px;
+    margin-top: 15px; /* Espacement entre les sections */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.recipe-info h3, .recipe-instructions h3 {
+    color: #4CAF50; /* Couleur verte pour les sous-titres */
+}
+
+.ingredients-list {
+    padding-left: 20px; /* Indentation pour les listes */
+}
+
+.recipe-actions {
+    display: flex; /* Affichage en flex pour les boutons */
+    justify-content: flex-start; /* Alignement à gauche des boutons */
+    margin-top: 10px; /* Espacement au-dessus des boutons */
+}
+
+.edit-button, .delete-button {
+    background-color: #4CAF50; /* Couleur verte pour le bouton Modifier */
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 5px; /* Espacement entre les boutons */
+    transition: background-color 0.3s; /* Transition douce */
+}
+
+.delete-button {
+    background-color: #f44336; /* Couleur rouge pour le bouton Supprimer */
+    transform: translateY(-2px);
+}
+
+.edit-button:hover {
+    background-color: #357a39; /* Couleur plus foncée au survol */
+    transform: translateY(-2px);
+}
+
+.delete-button:hover {
+    background-color: #d32f2f; /* Couleur plus foncée au survol */
+}
+
+footer {
+    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Dégradé de vert */
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Ombre douce inversée */
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 17px;
+}
+

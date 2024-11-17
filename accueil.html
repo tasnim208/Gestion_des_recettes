@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Recettes de Cuisine</title>
+    <link rel="stylesheet" href="accueil.css"> 
+</head>
+<body>
+    <header>
+        <h1>Application de Gestion de Recettes de Cuisine</h1>
+        
+   
+        <nav>
+            <a href="accueil.html">Accueil</a>
+            <a href="ajout.html">Ajouter une Recette</a>
+            <a href="login.html">Connexion</a>
+           
+        </nav>
+
+            
+           
+    </header> 
+
+    <main>
+        <section class="search-section">
+            <h2>Rechercher une recette :</h2>
+            <div class="search-container">
+                <div class="dropdown">
+                    <button class="dropbtn">Catégories</button>
+                    <div class="dropdown-content">
+                        <a href="tout_recette.html" target="contentFrame">tout </a>
+                        <a href="tunis.html" target="contentFrame">cuisine tunisienne </a>
+                        <a href="france.html" target="contentFrame">cuisine francais</a>
+                        <a href="italia.html" target="contentFrame">Cuisine italienne </a>
+                        <a href="espagna.html" target="contentFrame">Cuisine espagnole </a>
+                    </div>
+                </div>
+                <input type="text" id="search-bar" placeholder="Chercher une recette..." oninput="filterRecipes(this.value)">
+                <button id="search-button" class="search-button" onclick="filterRecipes(document.getElementById('search-bar')).value">Rechercher</button>
+            </div>
+        </section>
+        <iframe src="tout_recette.html" name="contentFrame" style="width: 100%; height: 600px; border: none;"></iframe>
+        
+        
+
+    <footer>
+        <p>&copy; 2024 Application de Gestion de Recettes. Tous droits réservés.</p>
+    </footer>
+    <script>
+        const searchButton = document.getElementById('search-button');
+        const searchBar = document.getElementById('search-bar');
+    
+        searchButton.addEventListener('click', () => {
+            const query = searchBar.value;
+            const targetFrame = document.querySelector('iframe[name="contentFrame"]');
+            if (query) {
+                targetFrame.src = `tout_recette.html?search=${encodeURIComponent(query)}`;
+            } else {
+                targetFrame.src = 'tout_recette.html';
+            }
+        });
+    </script>
+    <script src="accueil.js" ></script>
+</body>
+</html>
