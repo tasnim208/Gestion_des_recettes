@@ -1,17 +1,16 @@
-/* Styles de base */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9; /* Fond clair */
+    background-color: #f9f9f9; 
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Dégradé de vert */
+    background: linear-gradient(to right,   #8DC63F, #8BC34A);
     color: #ffffff;
     padding:  30px;
     text-align: left;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
     position: relative;
 }
 h2{
@@ -20,7 +19,7 @@ h2{
 
 header h1 {
     margin: 0;
-    font-size: 2.5em; /* Taille de police pour le titre */
+    font-size: 2.5em; 
 }
 
 nav {
@@ -45,7 +44,7 @@ nav a::after {
     left: 50%;
     height: 2px;
     width: 0;
-    background-color: #FFD54F; /* Ligne dorée en dessous */
+    background-color: #4CAF50; 
     transition: width 0.4s ease, left 0.4s ease;
 }
 
@@ -55,7 +54,7 @@ nav a:hover::after {
 }
 
 nav a:hover {
-    color: #FFD54F; /* Couleur dorée au survol */
+    color: #4CAF50; 
 }
 
 .edit-recipe-form {
@@ -63,7 +62,7 @@ nav a:hover {
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
-    border: 1px solid  #4CAF50;
+    border: 1px solid   #8DC63F;
     border-radius: 8px;
 }
 
@@ -80,13 +79,24 @@ label {
 input[type="text"],
 input[type="number"],
 input[type="file"],
+input[type="number"],
 textarea {
     width: 95%;
     padding: 10px;
-    border: 1px solid  #4CAF50;
+    border: 1px solid  #8DC63F;
     border-radius: 5px;
     font-size: 16px;
 }
+input[type="text"]:focus, 
+input[type="email"]:focus,
+input[type="file"]:focus, 
+input[type="number"]:focus,
+textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #4CAF50;
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+    }
 
 .current-recipe-image {
     width: 50%;
@@ -97,7 +107,7 @@ textarea {
 }
 
 .submit-button {
-    background-color:#4CAF50;
+    background-color: #8DC63F;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -111,11 +121,11 @@ textarea {
     transform: translateY(-2px);
 }
 footer {
-    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Dégradé de vert */
+    background: linear-gradient(to right,  #8DC63F, #8BC34A); 
     color: #ffffff;
     text-align: center;
     padding: 15px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Ombre douce inversée */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
@@ -128,9 +138,9 @@ footer::before {
     content: '';
     display: block;
     position: absolute;
-    top: -10px; /* Positionnement du motif juste au-dessus du footer */
+    top: -10px; 
     left: 0;
     width: 100%;
     height: 10px;
-    background: url('wave-pattern.svg') repeat-x; /* Utilisation du motif de vague */
+    background: url('wave-pattern.svg') repeat-x; 
 }

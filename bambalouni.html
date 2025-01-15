@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détails de la Recette - Bambalouni</title>
-    <link rel="stylesheet" href="recette.css"> 
+    <link rel="stylesheet" href="css/recette.css"> 
 </head>
 <body>
     <header>
         <h1>Détails de la Recette</h1>
         <nav>
-            <a href="accueil.html">Accueil</a>
+            <a href="test3.html">Accueil</a>
             <a href="ajout.html">Ajouter une Recette</a>
             <a href="login.html">Connexion</a>
         </nav>
@@ -20,7 +20,7 @@
     <main>
         <section class="recipe-details">
             <h2>Bambalouni :</h2>
-            <img src="bambalouni.jfif" alt="Image de la recette" class="recipe-image">
+            <img src="photo/bambalouni.jfif" alt="Image de la recette" class="recipe-image">
         </section>
 
         <section class="recipe-info">
@@ -49,18 +49,27 @@
         </section>
 
         <section class="recipe-time">
-            <p><strong>Temps de préparation :</strong> 20 minutes</p>
-            <p><strong>Temps de cuisson :</strong> 15 minutes</p>
+            <table class="table-container"> 
+                <tr>
+                     <th>Temps de préparation</th>
+                      <th>Temps de cuisson</th> </tr>
+                       <tr> 
+                        <td>20 minutes</td> 
+                        <td>15 minutes </td>
+                     </tr> 
+                    </table>
         </section>
 
         <section class="recipe-actions">
             <a href="modification.html" class="edit-button">Modifier la Recette</a>
             <a href="#" class="delete-button">Supprimer la Recette</a>
+            <button class="print-button" onclick="window.print()">Imprimer</button>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Application de Gestion de Recettes. Tous droits réservés.</p>
     </footer>
+
 </body>
 </html>

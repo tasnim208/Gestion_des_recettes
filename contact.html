@@ -1,0 +1,41 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/contact.js"></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="test3.html">Accueil</a></li>
+                <li><a href="login.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact</h2>
+            <p><i class="fas fa-envelope"></i> recette@gmail.com</p>
+            <p><i class="fas fa-phone"></i>55897463</p>
+            <p><i class="fas fa-map-marker-alt"></i> 7070 ras jbal,bizerte</p>
+        </div>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Nom" id="name" required>
+                <span id="nameMessage"></span>
+                <input type="email" placeholder="Email" id="email" required>
+                <span id="emailMessage"></span>
+                <textarea placeholder="Message" rows="4" id="Message" required></textarea>
+                <span id="messagMessage"></span>
+                <button type="submit" onclick="verif3()">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

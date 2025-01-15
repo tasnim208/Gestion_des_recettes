@@ -2,59 +2,48 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="inscri.css"> <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="css/inscri.css">
+    <script src="js/inscri.js"></script>
 </head>
 <body>
     <header>
-        <h1>Inscription à l'Application de Recettes</h1>
         <nav>
-            <a href="accueil.html">Accueil</a>
-            <a href="login.html">Connexion</a>
+            <ul>
+                <li><a href="test3.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Connexion</a></li>
+            </ul>
         </nav>
     </header>
-
-    <main>
-        <section class="register-form">
-            <form action="inscription.php" method="POST">
-                <div class="form-group">
-                    <label for="full-name">Nom complet :</label>
-                    <input type="text" id="full-name" name="full_name" required>
+    <section>
+        <div class="container">
+            <h2>Inscription</h2>
+            <form onsubmit="return verif2()">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Nom" id="name" required>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">E-mail :</label>
-                    <input type="email" id="email" name="email" required>
+                <span id="nameMessage"></span>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" id="email" required>
                 </div>
-
-                <div class="form-group">
-                    <label for="username">Nom d'utilisateur :</label>
-                    <input type="text" id="username" name="username" required>
+                <span id="emailMessage"></span>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Mot de passe" id="password" required>
                 </div>
-
-                <div class="form-group">
-                    <label for="password">Mot de passe :</label>
-                    <input type="password" id="password" name="password" required>
+                <span id="passwordMessage"></span>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirmer le mot de passe" id="confirm-password" required>
                 </div>
-
-                <div class="form-group">
-                    <label for="confirm-password">Confirmer le mot de passe :</label>
-                    <input type="password" id="confirm-password" name="confirm_password" required>
-                </div>
-
-                <div class="form-group">
-                    <button type="submit" class="submit-button">S'inscrire</button>
-                </div>
-
-                <p class="login-link">Déjà un compte ? <a href="login.html">Connectez-vous ici</a></p>
+                <span id="confirm-passwordMessage"></span>
+                <button type="submit" class="btn" onclick="return verif2()">S'inscrire</button>
             </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Application de Gestion de Recettes. Tous droits réservés.</p>
-    </footer>
+        </div>
+    </section>
 </body>
 </html>

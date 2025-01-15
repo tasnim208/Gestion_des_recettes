@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Application de Gestion de Recettes de Cuisine</title>
+    <link rel="stylesheet" href="css/test3.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#accueil">Accueil</a>
+            <a href="#recette">Recette</a>
+            <a href="ajout.html">Ajouter une Recette</a>
+            <a href="login.html">Connexion</a>
+            <a href="contact.html">contact</a>
+        </div>
+    </header>
+
+    <section class="hero" id="accueil">
+        <h1>Bienvenue sur votre Application de Gestion de Recettes de Cuisine</h1>
+        <p>Notre application est votre compagnon idéal pour explorer et gérer vos recettes de cuisine préférées. Que vous soyez un chef aguerri ou un amateur passionné, notre plateforme vous permet de découvrir de nouvelles recettes, d'organiser vos favoris, et de partager vos créations culinaires avec une communauté engagée.</p>
+        <a href="#recette" class="edit-button">Commencer</a>
+    </section>
+
+    <main>
+        <section class="search-section" id="recette">
+            <h2>Rechercher une recette :</h2>
+            <div class="search-container">
+                <div class="dropdown">
+                    <button class="dropbtn">Catégories</button>
+                    <div class="dropdown-content">
+                        <a href="tout_recette.html" target="contentFrame">Tout</a>
+                        <a href="tunis.html" target="contentFrame">Cuisine tunisienne</a>
+                        <a href="france.html" target="contentFrame">Cuisine française</a>
+                        <a href="italia.html" target="contentFrame">Cuisine italienne</a>
+                        <a href="espagna.html" target="contentFrame">Cuisine espagnole</a>
+                    </div>
+                </div>
+                <input type="text" id="search-bar" placeholder="Chercher une recette..." oninput="filterRecipes(this.value)" autofocus required>
+            </div>
+        </section>
+        <iframe src="tout_recette.html" name="contentFrame"></iframe>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Application de Gestion de Recettes. Tous droits réservés.</p>
+    </footer>
+    <script>
+    function filterRecipes(query) {
+        const iframe = document.querySelector('iframe[name="contentFrame"]');
+        if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage(query, '*'); 
+        }
+    }
+</script>
+    
+</body>
+</html>
+
